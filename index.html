@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+
+
+        
+        @keyframes boxamimation {
+            1%{transform: translate(0px,0px);}
+            5%{transform: translate(200px,0px);}
+            10%{transform: translate(400px,200px);}
+            15%{transform: translate(200px,200px);}
+            20%{transform: translate(0px,200px);}
+            25%{transform: rotate(0deg) translate(0,200px) rotate(0deg);}
+            35%{transform: rotate(120deg) translate(100px,200px) rotate(-120deg);}
+            40%{transform: translate(150px,-100px);}
+            45%{transform: translate(-200px,200px);}
+            55%{transform: translate(-200px,100px);}
+            65%{transform: translate(100px,-80px);}
+            75%{transform: translate(-300px,100px);}
+            85%{transform: translate(-300px,150px);}
+            95%{transform: translate(100px,-80px);}
+            100%{transform: translate(0px,0px);}
+        }
+
+
+
+
+
+
+        #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover; 
+        /* makes the video cover the entire container,
+        while maintaining its aspect ratio. This means that if the video is smaller
+        than the container, it will be stretched to cover the entire container. 
+        If the video is larger than the container, it will be cropped to fit the container.  */
+
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    .box{
+        border-radius: 10px;
+        height: 130px;
+        width: 130px;
+        border: 2px solid black;
+    }
+    .boxcontainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;  /*to shift to box down by 100px*/
+    }
+    .parent{
+        display: flex;
+        justify-content: center; 
+        /* border: 2px solid black;*/
+    }
+    .container{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        font-size: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 10px;
+        color:azure;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    
+    p{
+        margin: 2px;
+        padding-bottom:10px;
+        
+    }
+
+    
+    .box:hover{
+            animation: boxamimation
+            45s 1 linear;
+            transition: 0.2s ease-in;
+            scale: 0.9;
+    }
+
+
+    </style>
+</head>
+
+
+<body>
+    <video id="background-video" autoplay loop muted poster="">
+    <source src="Abstract Colorful Motion Background, 4K Purple Looping - Free Stock Footage.webm" type="video/mp4"></video>
+    <div class="parent">
+        <div class="container">
+            <h1>HOVER GAME</h1>
+            <p>TRY TO STAY ON THE BOX!</p>
+            <p>START THE GAME BY HOVERING OVER THE BOX</p>
+        </div>
+    </div>
+    <div class="boxcontainer">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
