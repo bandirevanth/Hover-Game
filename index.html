@@ -29,6 +29,9 @@
             width: 100vw;
             height: 100vh;
             object-fit: cover;
+            /* makes the video cover the entire container, while maintaining its aspect ratio. 
+            This means that if the video is smaller than the container, it will be stretched to cover the entire container. 
+            If the video is larger than the container, it will be cropped to fit the container.  */
             position: fixed;
             top: 0;
             left: 0;
@@ -100,3 +103,4 @@
     </div>
 </body>
 </html>
+
